@@ -142,7 +142,7 @@ else
 fi
 
 if test x"$req_field" = x"auto"; then
-  if test x"set_asm" = x"x86_64"; then
+  if test x"$set_asm" = x"x86_64"; then
     set_field=64bit
   fi
   if test x"$set_field" = x; then
