@@ -158,6 +158,7 @@ else
   set_field=$req_field
   case $set_field in
   64bit|*)
+    set_field=64bit
     if test x"$set_asm" != x"x86_64"; then
       SECP_INT128_CHECK
       if test x"$has_int128" != x"yes"; then
