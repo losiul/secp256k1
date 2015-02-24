@@ -157,7 +157,7 @@ if test x"$req_field" = x"auto"; then
 else
   set_field=$req_field
   case $set_field in
-  64bit)
+  64bit|*)
     if test x"$set_asm" != x"x86_64"; then
       SECP_INT128_CHECK
       if test x"$has_int128" != x"yes"; then
@@ -166,9 +166,6 @@ else
     fi
     ;;
   32bit)
-    ;;
-  *)
-    AC_MSG_ERROR([invalid field implementation selection])
     ;;
   esac
 fi
